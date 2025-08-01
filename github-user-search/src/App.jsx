@@ -1,21 +1,11 @@
-import React, { useState } from "react";
-import SearchBar from "./components/SearchBar";
-import UserCard from "./components/UserCard";
-import { fetchUser } from "./services/github";
+import React from 'react';
+import Search from './components/Search';
 
 function App() {
-  const [user, setUser] = useState(null);
-
-  const handleSearch = async (username) => {
-    const result = await fetchUser(username);
-    setUser(result);
-  };
-
   return (
     <div>
-      <h1>GitHub User Search</h1>
-      <SearchBar onSearch={handleSearch} />
-      {user && <UserCard user={user} />}
+      <h1 style={{ textAlign: 'center' }}>GitHub User Search</h1>
+      <Search />
     </div>
   );
 }
