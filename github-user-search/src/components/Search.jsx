@@ -39,8 +39,8 @@ function Search() {
 
       <div style={{ marginTop: '1rem' }}>
         {loading && <p>Loading...</p>}
-        {error && <p>Looks like we can't find the user.</p>}
-        {user && (
+        {error && <p>Looks like we cant find the user</p>}
+        {user && !error && (
           <div>
             <img
               src={user.avatar_url}
