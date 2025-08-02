@@ -4,8 +4,8 @@ import './index.css';
 
 function App() {
   return (
-    <div>
-      <h1 style={{ textAlign: 'center' }}>GitHub User Search</h1>
+    <div className="min-h-screen flex flex-col items-center justify-center p-4">
+      <h1 className="text-3xl font-bold mb-8">GitHub User Search</h1>
       <Search />
     </div>
   );
