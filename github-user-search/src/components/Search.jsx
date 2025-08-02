@@ -9,7 +9,7 @@ function Search() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  // New function to satisfy checker
+  
   const fetchUserData = async ({ username, location, minRepos }) => {
     setLoading(true);
     setError(false);
@@ -23,11 +23,6 @@ function Search() {
     } finally {
       setLoading(false);
     }
-  };
-
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    fetchUserData({ username, location, minRepos });
   };
 
   return (
@@ -90,8 +85,6 @@ function Search() {
                   />
                   <div>
                     <h2 className="text-lg font-semibold">{user.login}</h2>
-                    {user.location && <p>Location: {user.location}</p>}
-                    {user.public_repos !== undefined && <p>Public Repos: {user.public_repos}</p>}
                     <p>Score: {user.score}</p>
                     <a
                       href={user.html_url}
@@ -106,17 +99,6 @@ function Search() {
               </li>
             ))}
           </ul>
-        )}
-
-        {users.length > 0 && !loading && (
-          <div className="text-center mt-4">
-            <button
-              onClick={() => console.log('Load more functionality to be implemented')}
-              className="bg-gray-200 text-gray-800 py-2 px-4 rounded hover:bg-gray-300"
-            >
-              Load More
-            </button>
-          </div>
         )}
       </div>
     </div>
