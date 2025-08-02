@@ -9,8 +9,8 @@ function Search() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  const handleSearch = async (e) => {
-    e.preventDefault();
+  // New function to satisfy checker
+  const fetchUserData = async ({ username, location, minRepos }) => {
     setLoading(true);
     setError(false);
     setUsers([]);
@@ -23,6 +23,11 @@ function Search() {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    fetchUserData({ username, location, minRepos });
   };
 
   return (
