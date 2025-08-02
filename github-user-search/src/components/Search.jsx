@@ -25,6 +25,11 @@ function Search() {
     }
   };
 
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    fetchUserData({ username, location, minRepos });
+  };
+
   return (
     <div className="max-w-3xl mx-auto p-4">
       <h1 className="text-2xl font-bold text-center mb-4">Advanced GitHub User Search</h1>
