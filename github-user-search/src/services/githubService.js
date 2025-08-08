@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const fetchUsers = async ({ username, location, minRepos }) => {
+export const fetchUserData = async ({ username, location, minRepos }) => {
   let queryParts = [];
 
   if (username) queryParts.push(`${username} in:login`);
