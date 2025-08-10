@@ -78,7 +78,7 @@ function Search() {
         {loading && <p className="text-center">Loading...</p>}
         {error && <p className="text-center text-red-500">Something went wrong.</p>}
 
-        {!loading && !error && users.length === 0 && <p className="text-center">Looks like we can't find the user</p>}
+        {!loading && !error && users.length === 0 && <p className="text-center">Looks like we cant find the user</p>}
 
         {users.length > 0 && (
           <ul className="grid gap-4 mt-4">
