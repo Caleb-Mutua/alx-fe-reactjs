@@ -12,13 +12,13 @@ function UserProfile() {
       />
 
       <h1
-        className="text-xl text-blue-800 my-4 font-semibold
+        className="text-lg md:text-xl text-blue-800 my-4 font-semibold
                    transition-colors duration-300 ease-in-out hover:text-blue-500"
       >
         John Doe
       </h1>
 
-      <p className="text-gray-600 text-base">
+      <p className="text-gray-600 text-sm">
         Developer at Example Co. Loves to write code and explore new technologies.
       </p>
     </div>
