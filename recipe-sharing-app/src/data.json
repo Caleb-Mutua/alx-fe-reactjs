@@ -1,0 +1,40 @@
+[
+    {
+      "id": 1,
+      "title": "Spaghetti Carbonara",
+      "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper. This creamy, rich pasta is perfect for a quick weeknight dinner.",
+      "image": "https://via.placehold.co/400x300/FFEAA7/000000?text=Carbonara"
+    },
+    {
+      "id": 2,
+      "title": "Chicken Tikka Masala",
+      "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy. A beloved Indian dish with tender, flavorful chicken.",
+      "image": "https://via.placehold.co/400x300/FFEAA7/000000?text=Tikka+Masala"
+    },
+    {
+      "id": 3,
+      "title": "Beef Tacos",
+      "summary": "Authentic Mexican beef tacos with seasoned ground beef, fresh vegetables, and homemade salsa. Perfect for family dinners or entertaining guests.",
+      "image": "https://placehold.co/400x300/FFEAA7/000000?text=Beef+Tacos"
+    },
+    {
+      "id": 4,
+      "title": "Greek Salad",
+      "summary": "Fresh Mediterranean salad with crisp vegetables, olives, feta cheese, and a tangy vinaigrette. Light, healthy, and bursting with flavor.",
+      "image": "https://placehold.co/400x300/FFEAA7/000000?text=Greek+Salad"
+    },
+    {
+      "id": 5,
+      "title": "Chocolate Cake",
+      "summary": "Rich, moist chocolate cake with a decadent chocolate frosting. Perfect for birthdays, celebrations, or any chocolate lover's dream dessert.",
+      "image": "https://placehold.co/400x300/FFEAA7/000000?text=Chocolate+Cake" 
+
+    },
+    {
+      "id": 6,
+      "title": "Thai Green Curry",
+      "summary": "Aromatic Thai green curry with coconut milk, fresh herbs, and your choice of protein. Spicy, creamy, and full of authentic Thai flavors.",
+      "image": "https://placehold.co/400x300/FFEAA7/000000?text=Green+Curry"
+
+    }
+  ]
