@@ -1,7 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom";
-import ProtectedRoute from "../components/ProtectedRoute";
-import ProfileDetails from "./ProfileDetails";
-import ProfileSettings from "./ProfileSettings";
+import ProtectedRoute from "./ProtectedRoute";
+import ProfileDetails from "../pages/ProfileDetails";
+import ProfileSettings from "../pages/ProfileSettings";
 
 export default function Profile() {
   return (
