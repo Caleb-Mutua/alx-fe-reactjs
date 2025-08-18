@@ -1,90 +1,76 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const RegistrationForm = () => {
-  // Manage form state
-  const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    password: "",
-  });
-
+  // Separate states for controlled inputs
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  // Handle input changes
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  // Handle submit
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.username || !formData.email || !formData.password) {
-      setError("⚠️ All fields are required.");
+    // simple validation
+    if (!username || !email || !password) {
+      setError("All fields are required!");
       return;
     }
 
     setError("");
-    console.log("User registered:", formData);
-    alert(`✅ Registered user: ${formData.username}`);
+    console.log("User Registered:", { username, email, password });
 
-    // reset form after submit
-    setFormData({ username: "", email: "", password: "" });
+    // reset form
+    setUsername("");
+    setEmail("");
+    setPassword("");
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-md rounded-xl">
-      <h2 className="text-2xl font-bold mb-4 text-center">User Registration</h2>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white shadow-md rounded-lg p-6 w-full max-w-sm"
+      >
+        <h2 className="text-2xl font-bold mb-4 text-center">Register</h2>
 
-      {error && <p className="text-red-500 mb-3">{error}</p>}
+        {error && <p className="text-red-500 mb-3">{error}</p>}
 
-      <form onSubmit={handleSubmit} className="space-y-4">
         {/* Username */}
-        <div>
-          <label className="block mb-1 font-medium ">Username</label>
+        <div className="mb-4">
+          <label className="block mb-1 font-medium">Username</label>
           <input
             type="text"
-            name="username"
-            value={formData.username} // ✅ controlled
-            onChange={handleChange}
-            className=" space-x-4 w-full border px-3 py-2 rounded-md focus:outline-none focus:ring focus:ring-indigo-300"
-            placeholder="Enter username"
+            value={username}          // ✅ controlled input
+            onChange={(e) => setUsername(e.target.value)}
+            className="w-full border border-gray-300 p-2 rounded"
           />
         </div>
 
         {/* Email */}
-        <div>
+        <div className="mb-4">
           <label className="block mb-1 font-medium">Email</label>
           <input
             type="email"
-            name="email"
-            value={formData.email}   // ✅ controlled
-            onChange={handleChange}
-            className="w-full border px-3 py-2 rounded-md focus:outline-none focus:ring focus:ring-indigo-300"
-            placeholder="Enter email"
+            value={email}             // ✅ controlled input
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full border border-gray-300 p-2 rounded"
           />
         </div>
 
         {/* Password */}
-        <div>
+        <div className="mb-4">
           <label className="block mb-1 font-medium">Password</label>
           <input
             type="password"
-            name="password"
-            value={formData.password}   // ✅ controlled
-            onChange={handleChange}
-            className="w-full border px-3 py-2 rounded-md focus:outline-none focus:ring focus:ring-indigo-300"
-            placeholder="Enter password"
+            value={password}          // ✅ controlled input
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full border border-gray-300 p-2 rounded"
           />
         </div>
 
         <button
           type="submit"
-          className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition"
+          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
         >
           Register
         </button>
