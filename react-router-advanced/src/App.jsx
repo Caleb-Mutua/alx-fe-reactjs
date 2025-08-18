@@ -1,33 +1,30 @@
-import { Routes, Route, Link, Navigate } from "react-router-dom";
-import Home from "./pages/Home";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
-import Profile from "./pages/Profile";
-import NotFound from "./pages/NotFound";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Profile from "./components/Profile";
+import BlogPost from "./components/BlogPost";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
-    <div>
-      <nav className="p-4 bg-gray-200 flex gap-4">
-        <Link to="/">Home</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/profile">Profile</Link>
-      </nav>
-
+    <BrowserRouter>
       <Routes>
+        {/* Public Route */}
         <Route path="/" element={<Home />} />
 
+        {/* Protected Route */}
+        <Route
+          path="/profile/*"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+
         {/* Dynamic Route */}
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:postId" element={<BlogPost />} />
-
-        {/* Protected + Nested Routes */}
-        <Route path="/profile/*" element={<Profile />} />
-
-        {/* Catch-All Route */}
-        <Route path="*" element={<NotFound />} />
+        <Route path="/post/:id" element={<BlogPost />} />
       </Routes>
-    </div>
+    </BrowserRouter>
   );
 }
 
