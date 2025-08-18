@@ -20,22 +20,15 @@ const RecipeList = () => {
   const isFavorite = (id) => favorites.some((fav) => fav?.id === id);
 
   return (
-    <div style={{ padding: '1rem' }}>
-      <h2>All Recipes</h2>
+    <div  className="mb-8 p-6 bg-white rounded-lg shadow-md" >
+      <h2 className= "text-2xl font-semibold text-gray-700 mb-4">All Recipes</h2>
 
       <input
         type="text"
         placeholder="Search recipes..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        style={{
-          padding: '0.5rem',
-          marginBottom: '1rem',
-          width: '100%',
-          fontSize: '1rem',
-          borderRadius: '5px',
-          border: '1px solid #ccc',
-        }}
+         className="w-full mb-4 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
 
       {filteredRecipes.length === 0 ? (

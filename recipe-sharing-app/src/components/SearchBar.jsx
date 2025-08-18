@@ -8,8 +8,9 @@ const SearchBar = () => {
     <input
       type="text"
       placeholder="Search recipes..."
-      className="p-2 border rounded w-full mb-4"
+      className=" .mb-4 .mb-8 p-6 bg-white rounded-lg shadow-md"
       onChange={(e) => setSearchTerm(e.target.value)}
+   
     />
   );
 };

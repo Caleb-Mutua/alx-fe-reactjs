@@ -6,8 +6,8 @@ const FavoritesList = () => {
   const recipes = useRecipeStore(state => state.recipes);
     
   return (
-    <div>
-      <h2>My Favorites</h2>
+    <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
+      <h2 className="text-2xl font-semibold text-gray-700 mb-4">My Favorites</h2>
       {favorites.map(recipe => recipe && (
         <div key={recipe.id}>
           <h3>{recipe.title}</h3>

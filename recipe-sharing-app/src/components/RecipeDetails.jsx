@@ -12,8 +12,8 @@ const RecipeDetails = () => {
   if (!recipe) return <p>Recipe not found.</p>;
 
   return (
-    <div>
-      <h2>{recipe.title}</h2>
+    <div >
+      <h2 className="text-2xl ">{recipe.title}</h2>
       <p>{recipe.description}</p>
       <EditRecipeForm recipe={recipe} />
       <DeleteRecipeButton recipeId={recipe.id} />
