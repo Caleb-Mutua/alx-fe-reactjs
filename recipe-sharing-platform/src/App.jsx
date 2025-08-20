@@ -1,9 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
-import './App.css'
-import './index.css'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import RecipeDetail from './components/RecipeDetail';
+
 
 function App() {
   return (
@@ -15,5 +14,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;
